@@ -1,0 +1,5 @@
+baseURL: "https://blog.voidspace.github.io/"
+title: VoidSpace's Blog
+languageCode: zh-cn
+
+theme: [hugo-PaperMod]
