@@ -1,0 +1,47 @@
+<script type="text/javascript"
+        id="MathJax-script"
+        async
+        src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+
+<script>
+MathJax = {
+  loader: {load: ['[tex]/physics']}, // WvW-vOiDs: 加载 physics 宏包
+  tex: {
+    inlineMath: [['\\(','\\)']],
+    displayMath: [['\\[','\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    // =========================== 加载 physics 宏包 =========================== //
+    packages: {'[+]': ['physics']}, // WvW-vOiDs: 加载 physics 宏包
+    physics: { // WvW-vOiDs: physics 宏包设置
+        italicdiff: false,
+        arrowdel: false
+    },
+    // ===================================================================== //
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+  }
+};
+</script>
+
+<script>
+MathJax.typesetPromise().then(() => {
+    // 获取所有渲染的数学元素
+    const mathElements = document.querySelectorAll('.math, .inline-math');
+    mathElements.forEach(element => {
+        element.classList.add('has-jax');
+    });
+});
+</script>
+
+<style>
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+</style>

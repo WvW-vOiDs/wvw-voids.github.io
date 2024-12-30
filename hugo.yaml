@@ -26,6 +26,21 @@ outputs:
     - RSS
     - JSON # necessary for search
 
+# ================================= LaTeX 设置 ================================= #
+markup:
+  goldmark:
+    extensions:
+      passthrough:
+        delimiters:
+          block:
+          - - \[
+            - \]
+          inline:
+          - - \(
+            - \)
+        enable: true
+params:
+  mathjax: true # 默认开启数学模式, 如需关闭则在文档开始声明: math: false
 
 # **************************************************************************** #
 #                                   language                                   #
