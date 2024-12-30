@@ -3,26 +3,77 @@
 # **************************************************************************** #
 
 baseURL: "https://wvw-voids.github.io/"
-languageCode: zh-cn
-title: VoidStalker's Blog
+title: VoidStalker's Blog # 可以放在 languages 里
 theme: PaperMod
 copyright: "[©2024 VoidStalker's Blog](https://wvw-voids.github.io/)"
 
-# ---------------------------------------------------------------------------- #
+
+
+# **************************************************************************** #
+#                                     基本设置                                     #
+# **************************************************************************** #
 
 enableInlineShortcodes: true # https://youtu.be/Eu4zSaKOY4A
 enableEmoji: true # 允许 emoji
 hasCJKLanguage: true # https://gohugo.io/getting-started/configuration/#hascjklanguage
-defaultContentLanguage: zh-cn # 顶部首先展示的语言界面
+defaultContentLanguage: zh-CN # 顶部首先展示的语言界面
 defaultContentLanguageInSubdir: false # 是否要在地址栏加上默认的语言代码
+
+# =================================== 搜索相关 =================================== #
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
+
+
+# **************************************************************************** #
+#                                   language                                   #
+# **************************************************************************** #
+languages:
+  zh-CN:
+    # ================================= 基本信息 ================================= #
+    languageName: 简体中文
+    languageCode: zh-CN
+    languageDirection: ltr # left to right
+    # ================================= 语言设置 ================================= #
+    weight: 1 # 权重
+    disabled: false
+    contentDir: content/zh
+    # ================================= 分类系统 ================================= #
+    taxonomies: # https://gohugo.io/methods/site/taxonomies/
+      category: categories
+      tag: tags
+    # ================================== 菜单 ================================== #
+    menus: # https://gohugo.io/content-management/menus/
+      main:
+        - name: 首页
+          url: /
+          weight: 4
+        - name: 归档
+          url: archives/
+          weight: 5
+        - name: 分类
+          url: categories/
+          weight: 10
+        - name: 标签
+          url: tags/
+          weight: 10
+        - name: 搜索
+          url: search/
+          weight: 20
+        - name: 关于
+          url: about/
+          weight: 21
 
 
 # **************************************************************************** #
 #                                     未使用功能                                    #
 # **************************************************************************** #
 
-enableRobotsTXT: true # https://zhuanlan.zhihu.com/p/65463520
+enableRobotsTXT: true # https://zhuanlan.zhihu.com/p/65463520 模板里有
 pygmentsUseClasses: true # 代码高亮相关
+
 
 
 # **************************************************************************** #
@@ -39,6 +90,353 @@ buildFuture: false # 构建未来发布的内容
 buildExpired: false # 构建过期的内容
 
 
+
 # **************************************************************************** #
 #                                      待整理                                     #
 # **************************************************************************** #
+
+# mainsections: ["posts", "papermod"]
+
+# minify:
+#   disableXML: true
+#   # minifyOutput: true
+
+# languages:
+#   en:
+#     menu:
+#       main:
+#         - name: Archive
+#           url: archives
+#           weight: 5
+#         - name: Search
+#           url: search/
+#           weight: 10
+#         - name: Tags
+#           url: tags/
+#           weight: 10
+#         - name: WiKi
+#           url: https://github.com/adityatelange/hugo-PaperMod/wiki/
+
+#   fr:
+#     languageName: ":fr:"
+#     weight: 2
+#     title: PaperModL2
+#     taxonomies:
+#       category: FRcategories
+#       tag: FRtags
+#       series: FRseries
+#     menu:
+#       main:
+#         - name: Archive
+#           url: archives/
+#           weight: 5
+#         - name: FRTags
+#           url: frtags
+#           weight: 10
+#         - name: FRCategories
+#           url: frcategories
+#           weight: 10
+#         - name: FRSeries
+#           url: frseries
+#           weight: 10
+#         - name: NullLink
+#           url: "#"
+
+#     # custom params for each language should be under [langcode].parms - hugo v0.120.0
+#     params:
+#       languageAltTitle: French
+#       profileMode:
+#         enabled: true
+#         title: PaperMod
+#         imageUrl: "https://raw.githubusercontent.com/googlefonts/noto-emoji/master/svg/emoji_u1f9d1_1f3fb_200d_1f4bb.svg"
+#         imageTitle: ProfileMode image
+#         # imageWidth: 120
+#         # imageHeight: 120
+#         subtitle: "☄️ Fast | ☁️ Fluent | 🌙 Smooth | 📱 Responsive"
+#         buttons:
+#           - name: Blog
+#             url: posts
+#           - name: Profile Mode
+#             url: https://github.com/adityatelange/hugo-PaperMod/wiki/Features#profile-mode
+
+#   fa:
+#     languagedirection: rtl
+#     weight: 3
+#     title: PaperMod RTL
+#     taxonomies:
+#       category: FAcategories
+#       tag: FAtags
+#       series: FAseries
+#     menu:
+#       main:
+#         - name: FATags
+#           url: fatags
+#           weight: 10
+#     # custom params for each language should be under [langcode].parms - hugo v0.120.0
+#     params:
+#       homeInfoParams:
+#         Title: "Hi there \U0001F44B"
+#         Content: Welcome to RTL layout
+
+# outputs:
+#   home:
+#     - HTML
+#     - RSS
+#     - JSON
+
+# params:
+#   env: production # to enable google analytics, opengraph, twitter-cards and schema.
+#   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+#   author: Theme PaperMod
+#   # author: ["Me", "You"] # multiple authors
+
+#   defaultTheme: auto
+#   # disableThemeToggle: true
+#   ShowShareButtons: true
+#   ShowReadingTime: true
+#   # disableSpecial1stPost: true
+#   displayFullLangName: true
+#   ShowPostNavLinks: true
+#   ShowBreadCrumbs: true
+#   ShowCodeCopyButtons: true
+#   ShowRssButtonInSectionTermList: true
+#   ShowAllPagesInArchive: true
+#   ShowPageNums: true
+#   ShowToc: true
+#   # comments: false
+#   images: ["images/papermod-cover.png"]
+
+#   profileMode:
+#     enabled: false
+#     title: PaperMod
+#     imageUrl: "#"
+#     imageTitle: my image
+#     # imageWidth: 120
+#     # imageHeight: 120
+#     buttons:
+#       - name: Archives
+#         url: archives
+#       - name: Tags
+#         url: tags
+
+#   homeInfoParams:
+#     Title: "PaperMod's Demo"
+#     Content: >
+#       👋 Welcome to demo page of Hugo's theme PaperMod!
+
+#       - **PaperMod**  is designed to be clean and simple but fast and responsive theme with useful feature-set that enhances UX.
+
+#       - Feel free to show your support by giving us a star 🌟 on GitHub and sharing with your friends and social media .
+
+#       - PaperMod is based on theme [Paper](https://github.com/nanxiaobei/hugo-paper/tree/4330c8b12aa48bfdecbcad6ad66145f679a430b3).
+
+#   socialIcons:
+#     - name: github
+#       title: View Source on Github
+#       url: "https://github.com/adityatelange/hugo-PaperMod"
+#     - name: Discord
+#       title: Join discord community
+#       url: "https://discord.gg/ahpmTvhVmp"
+#     - name: X
+#       title: Share PaperMod on X/Twitter
+#       url: "https://x.com/intent/tweet/?text=Checkout%20Hugo%20PaperMod%20%E2%9C%A8%0AA%20fast,%20clean,%20responsive%20Hugo%20theme.&url=https://github.com/adityatelange/hugo-PaperMod&hashtags=Hugo,PaperMod"
+#     - name: KoFi
+#       title: Buy me a Ko-Fi :)
+#       url: "https://ko-fi.com/adityatelange"
+
+#   editPost:
+#     URL: "https://github.com/adityatelange/hugo-PaperMod/tree/exampleSite/content"
+#     Text: "Suggest Changes" # edit text
+#     appendFilePath: true # to append file path to Edit link
+
+#   # label:
+#   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
+#   # text: "Home"
+#   # icon: icon.png
+#   # iconHeight: 35
+
+#   # analytics:
+#   #     google:
+#   #         SiteVerificationTag: "XYZabc"
+
+#   assets:
+#     disableHLJS: true
+#   #     favicon: "<link / abs url>"
+#   #     favicon16x16: "<link / abs url>"
+#   #     favicon32x32: "<link / abs url>"
+#   #     apple_touch_icon: "<link / abs url>"
+#   #     safari_pinned_tab: "<link / abs url>"
+
+#   # cover:
+#   #     hidden: true # hide everywhere but not in structured data
+#   #     hiddenInList: true # hide on list pages and home
+#   #     hiddenInSingle: true # hide on single page
+
+#   # fuseOpts:
+#   #     isCaseSensitive: false
+#   #     shouldSort: true
+#   #     location: 0
+#   #     distance: 1000
+#   #     threshold: 0.4
+#   #     minMatchCharLength: 0
+#   #     keys: ["title", "permalink", "summary", "content"]
+
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true
+#   highlight:
+#     noClasses: false
+#     # anchorLineNos: true
+#     # codeFences: true
+#     # guessSyntax: true
+#     # lineNos: true
+#     # style: monokai
+
+# # privacy:
+# #   vimeo:
+# #     disabled: false
+# #     simple: true
+
+# #   twitter:
+# #     disabled: false
+# #     enableDNT: true
+# #     simple: true
+
+# #   instagram:
+# #     disabled: false
+# #     simple: true
+
+# #   youtube:
+# #     disabled: false
+# #     privacyEnhanced: true
+
+# services:
+#   instagram:
+#     disableInlineCSS: true
+#   twitter:
+#     disableInlineCSS: true
+
+
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+
+
+
+
+# # ~~~~~~~~~
+# # 主题的配置(基本上是)
+# # ~~~~~~~~~
+# paginate: 8 # 每页展示的文章数量，这个没找到文档，应该是主题自己设置的
+
+# params:
+#   env: production # to enable google analytics, opengraph, twitter-cards and schema.
+#   description: "Theme PaperMod - https://github.com/adityatelange/hugo-PaperMod"
+#   author: Sonny Calcr
+#   defaultTheme: dark # 默认是暗色背景
+#   ShowShareButtons: false # 关闭分享的按钮
+#   ShowReadingTime: true # 展示预估的阅读时长
+#   displayFullLangName: true # 展示全名
+#   ShowPostNavLinks: true # 展示文章导航链接，就是下一页上一页的那个
+#   ShowBreadCrumbs: false # 是否展示标题上方的面包屑
+#   ShowCodeCopyButtons: true # 是否展示复制代码的按钮
+#   ShowRssButtonInSectionTermList: true # RSS 相关
+#   ShowAllPagesInArchive: true # 在归档页面展示所有的页面
+#   ShowPageNums: true # 展示页面的页数
+#   ShowToc: true # 展示文章详情页的目录
+#   comments: true # 评论
+#   images: ["https://i.postimg.cc/7hwBy7VS/calcr.png"] # 缺省的图片，比如，博客的封面
+#   DateFormat: "2006-01-02" # 这个时间是作者自己写的，只能这样写
+
+#   # 首页的文章上方的一些信息
+#   homeInfoParams:
+#     # 首页的 profile 内容
+#     Title: "Hey Guys 👋"
+#     # 首页的 profile 内容
+#     Content: >
+#       Welcome to my Blog! 这里主要记录了我的视频创作的一些补充说明材料。博客因为是托管在 Github 上面，以及，图床使用的是国外免费的 Postimages，所以，挂上一个梯子可能会让访问更加顺畅。
+#       <br>
+#       也可以在其他地方访问我的文字材料，如下：
+#       <br>
+#       <div>
+#       ● [SonnyCalcr's Notion](https://www.notion.so/luflyan/b5ee8643e563498b96c6b7ab0f27343b)
+#       <br>
+#       ● [博客园](https://www.cnblogs.com/fanlumaster)
+#       <br>
+#       ● My personal username of Discord is sonnycalcr, and, welcome to my [Discord Group/Server](https://discord.gg/HCebZMrfhE), maybe just to talk about some simple problems.
+#       </div>
+#   # 社交帐号的按钮
+#   socialIcons:
+#     - name: github
+#       title: Follow my Github
+#       url: "https://github.com/sonnycalcr"
+#     - name: X
+#       title: Follow my Twitter
+#       url: "https://x.com/sonnycalcr"
+#     - name: Bilibili
+#       title: 关注我的 B 站帐号
+#       url: "https://space.bilibili.com/3493138859559908"
+#     - name: Youtube
+#       title: Follow my Youtube Channel
+#       url: "https://youtube.com/@sonnycalcr"
+#     - name: Telegram
+#       title: Contact Me
+#       url: "https://t.me/sonnycalcr"
+
+#   # 搜索
+#   fuseOpts:
+#       isCaseSensitive: false # 是否大小写敏感
+#       shouldSort: true # 是否排序
+#       location: 0
+#       distance: 1000
+#       threshold: 0.4
+#       minMatchCharLength: 0
+#       # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+#       keys: ["title", "permalink", "summary", "content"]
+#       includeMatches: true
+#   # 设置网站的标签页的图标，即 favicon
+#   assets:
+#       favicon: "favicon.png"
+#       favicon16x16: "favicon.png"
+#       favicon32x32: "favicon.png"
+#       apple_touch_icon: "favicon.png"
+#       safari_pinned_tab: "favicon.png"
+#       disableHLJS: true
+
+#   # 评论的设置
+#   giscus:
+#     repo: "sonnycalcr/sonnycalcr.github.io"
+#     repoId: "R_kgDOMed_Fg"
+#     category: "Announcements"
+#     categoryId: "DIC_kwDOMed_Fs4ChXJF"
+#     mapping: "pathname"
+#     strict: "0"
+#     reactionsEnabled: "1"
+#     emitMetadata: "0"
+#     inputPosition: "bottom"
+#     lightTheme: "light"
+#     darkTheme: "dark"
+#     lang: "zh-CN"
+#     crossorigin: "anonymous"
+
+# # https://github.com/adityatelange/hugo-PaperMod/wiki/Features#search-page
+# outputs:
+#   home:
+#     - HTML # 生成的静态页面
+#     - RSS # 这个其实无所谓
+#     - JSON # necessary for search, 这里的配置修改好之后，一定要重新生成一下
+
+# markup:
+#   goldmark:
+#     renderer:
+#       unsafe: true # 可以 unsafe，有些 html 标签和样式可能需要
+#   highlight:
+#     anchorLineNos: false # 不要给行号设置锚标
+#     codeFences: true # 代码围栏
+#     noClasses: false # TODO: 不知道干啥的，暂时没必要了解，不影响展示
+#     lineNos: true # 代码行
+#     lineNumbersInTable: false # 不要设置成 true，否则如果文章开头是代码的话，摘要会由一大堆数字(即代码行号)开头文章
+#     # 这里设置 style 没用，得自己加 css
+#     # style: "github-dark"
+#     # style: monokai
