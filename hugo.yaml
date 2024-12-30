@@ -119,10 +119,10 @@ params:
     enabled: true
     # title: "<Title>" # optional default will be site title
     # subtitle: "This is subtitle"
-    imageUrl: "https://i.postimg.cc/J4J9skvk/Torus-Knot-5-17.png" # optional
-    imageTitle: "Torus Knot (5,17)" # optional
-    imageWidth: 120 # custom size
-    imageHeight: 120 # custom size
+    # imageUrl: "https://i.postimg.cc/J4J9skvk/Torus-Knot-5-17.png" # optional
+    # imageTitle: "Torus Knot (5,17)" # optional
+    # imageWidth: 120 # custom size
+    # imageHeight: 120 # custom size
     # buttons:
     #   - name: Archive
     #     url: "/archive"
