@@ -1,6 +1,6 @@
 ---
 date: "2024-12-30T12:03:13+08:00"
-title: "Test"
+title: "Test Demo"
 
 draft: false
 ShowToc: true
@@ -63,7 +63,9 @@ categories: []
 \]
 
 
-### physics 宏包[^cdn]
+### physics 宏包
+
+现在用的 Mathjax 的cdn不是很稳定, 有时候本地渲染不出来.
 
 1.
 *code*:
@@ -253,4 +255,3 @@ categories: []
 
 
 [^行号]: 和上一个一样是因为我默认设置了代码块有行号.
-[^cdn]: 现在用的 Mathjax 的cdn不是很稳定, 有时候渲染不出来.
