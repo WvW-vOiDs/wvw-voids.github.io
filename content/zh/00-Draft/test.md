@@ -5,9 +5,10 @@ title: "Test"
 draft: true
 
 tags: ["test tag"]
+categories: ["test category"]
 ---
 
-测试用.
+本文用于测试网站功能.
 
 # 数学公式测试
 
@@ -53,4 +54,8 @@ tags: ["test tag"]
 ```
 \[
     \ip{\psi}{\phi}
+\]
+
+\[
+    \boldsymbol{x_{i+1}}+\boldsymbol{x_{i+2}}=\boldsymbol{x}_{i+3}
 \]
