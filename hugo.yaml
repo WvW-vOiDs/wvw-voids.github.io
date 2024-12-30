@@ -7,6 +7,10 @@ title: VoidStalker's Blog # 可以放在 languages 里
 theme: PaperMod
 copyright: "[©2024 VoidStalker's Blog](https://wvw-voids.github.io/)"
 
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+
 
 
 # **************************************************************************** #
@@ -15,19 +19,35 @@ copyright: "[©2024 VoidStalker's Blog](https://wvw-voids.github.io/)"
 
 enableInlineShortcodes: true # https://youtu.be/Eu4zSaKOY4A
 enableEmoji: true # 允许 emoji
+enableRobotsTXT: true # https://zhuanlan.zhihu.com/p/65463520 paperMod模板里有
+
 hasCJKLanguage: true # https://gohugo.io/getting-started/configuration/#hascjklanguage
 defaultContentLanguage: zh-CN # 顶部首先展示的语言界面
 defaultContentLanguageInSubdir: false # 是否要在地址栏加上默认的语言代码
 
-# =================================== 搜索相关 =================================== #
-outputs:
-  home:
-    - HTML
-    - RSS
-    - JSON # necessary for search
+pygmentsUseClasses: true # 代码高亮相关
 
-# ================================= LaTeX 设置 ================================= #
+# Hugo allows you to set draft, date, publishDate, and expiryDate in the front matter of your content. By default, Hugo will not publish content when:
+# The draft value is true
+buildDrafts: false # 构建草稿
+# The date is in the future
+# The publishDate is in the future
+buildFuture: false # 构建未来发布的内容
+# The expiryDate is in the past
+buildExpired: false # 构建过期的内容
+
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+
+
+
+# **************************************************************************** #
+#                                    markup                                    #
+# **************************************************************************** #
+
 markup:
+  # ================================ LaTeX 设置 ================================ #
   goldmark:
     extensions:
       passthrough:
@@ -40,6 +60,10 @@ markup:
             - \)
         enable: true
 params:
+  # ************************************************************************** #
+  #                                  LaTeX 设置                                  #
+  # ************************************************************************** #
+
   mathjax: true # 默认开启数学模式, 如需关闭则在文档开始声明: math: false
 
 # **************************************************************************** #
@@ -63,46 +87,33 @@ languages:
     menus: # https://gohugo.io/content-management/menus/
       main:
         - name: 首页
+          identifier: home
           url: /
-          weight: 4
+          weight: 10
         - name: 归档
+          identifier: archive
           url: archives/
-          weight: 5
-        - name: 分类
-          url: categories/
-          weight: 10
-        - name: 标签
-          url: tags/
-          weight: 10
-        - name: 搜索
-          url: search/
           weight: 20
+        - name: 分类
+          identifier: category
+          url: categories/
+          weight: 30
+        - name: 标签
+          identifier: tag
+          url: tags/
+          weight: 40
+        - name: 搜索
+          identifier: search
+          url: search/
+          weight: 50
         - name: 关于
+          identifier: about
           url: about/
-          weight: 21
+          weight: 60
 
-
-# **************************************************************************** #
-#                                     未使用功能                                    #
-# **************************************************************************** #
-
-enableRobotsTXT: true # https://zhuanlan.zhihu.com/p/65463520 模板里有
-pygmentsUseClasses: true # 代码高亮相关
-
-
-
-# **************************************************************************** #
-#                                     默认设置                                     #
-# **************************************************************************** #
-
-# Hugo allows you to set draft, date, publishDate, and expiryDate in the front matter of your content. By default, Hugo will not publish content when:
-# The draft value is true
-buildDrafts: false # 构建草稿
-# The date is in the future
-# The publishDate is in the future
-buildFuture: false # 构建未来发布的内容
-# The expiryDate is in the past
-buildExpired: false # 构建过期的内容
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
+# ---------------------------------------------------------------------------- #
 
 
 
