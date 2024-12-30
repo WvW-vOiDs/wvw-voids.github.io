@@ -96,6 +96,67 @@ params:
 
   mathjax: true # 默认开启数学模式, 如需关闭则在文档开始声明: math: false
 
+  # ************************************************************************** #
+  #                                 PaperMod 设置                                #
+  # ************************************************************************** #
+
+  # ============================== Default Theme ============================= #
+  # defaultTheme: light
+  # defaultTheme: dark
+  defaultTheme: auto # to switch between dark or light according to browser theme
+  # -------------------------------------------------------------------------- #
+
+  # =========================== Theme Switch Toggle ========================== #
+  # disableThemeToggle: true
+  # -------------------------------------------------------------------------- #
+
+  # ======= Regular Mode (default-mode), Home-Info Mode or Profile Mode ====== #
+  # homeInfoParams:
+  #   Title: Hi there wave
+  #   Content: Can be Info, links, about...
+  # -------------------------------------------------------------------------- #
+  profileMode:
+    enabled: true
+    # title: "<Title>" # optional default will be site title
+    # subtitle: "This is subtitle"
+    imageUrl: "https://i.postimg.cc/J4J9skvk/Torus-Knot-5-17.png" # optional
+    imageTitle: "Torus Knot (5,17)" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    # buttons:
+    #   - name: Archive
+    #     url: "/archive"
+    #   - name: Github
+    #     url: "https://github.com/"
+  socialIcons: # optional
+    - name: "Bilibili"
+      url: "https://space.bilibili.com/38675533"
+    - name: "Github"
+      url: "https://github.com/wvw-voids"
+  # -------------------------------------------------------------------------- #
+
+  # ================================== 搜索相关 ================================== #
+  fuseOpts: # https://www.fusejs.io/api/options.html
+    isCaseSensitive: false
+    shouldSort: true
+    # location: 0 # Determines approximately where in the text is the pattern expected to be found.
+    distance: 1000 # Determines how close the match must be to the fuzzy location (specified by location). An exact letter match which is distance characters away from the fuzzy location would score as a complete mismatch. A distance of 0 requires the match be at the exact location specified. A distance of 1000 would require a perfect match to be within 800 characters of the location to be found using a threshold of 0.8.
+    threshold: 0.4 # At what point does the match algorithm give up. A threshold of 0.0 requires a perfect match (of both letters and location), a threshold of 1.0 would match anything.
+    minMatchCharLength: 0 # Only the matches whose length exceeds this value will be returned. (For instance, if you want to ignore single character matches in the result, set it to 2).
+    # limit: 10 # limit (type: number): Denotes the max number of returned search results. (refer: https://www.fusejs.io/api/methods.html#search)
+    keys: ["title", "summary", "content"] # List of keys that will be searched. This supports nested paths, weighted search, searching in arrays of strings and objects.
+  # -------------------------------------------------------------------------- #
+
+  # ================================== 页面元素 ================================== #
+  # ShowShareButtons: true
+  # ShowReadingTime: true
+  ShowBreadCrumbs: true # Adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
+  editPost:
+    URL: "https://github.com/WvW-vOiDs/wvw-voids.github.io/tree/main/content/zh"
+    Text: "Suggest Changes" # edit text
+    appendFilePath: true # to append file path to Edit link
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
 outputs:
   home:
     - HTML
