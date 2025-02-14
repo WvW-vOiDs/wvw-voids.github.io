@@ -149,7 +149,7 @@ params:
 
   # ================================== 页面元素 ================================== #
   # ShowShareButtons: true
-  # ShowReadingTime: true
+  ShowReadingTime: false
   ShowBreadCrumbs: true # Adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
   editPost:
     URL: "https://github.com/WvW-vOiDs/wvw-voids.github.io/tree/main/content/zh"
