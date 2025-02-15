@@ -18,7 +18,7 @@ copyright: "[©2024 VoidStalker's Blog](https://wvw-voids.github.io/)"
 # **************************************************************************** #
 
 enableInlineShortcodes: true # https://youtu.be/Eu4zSaKOY4A
-enableEmoji: true # 允许 emoji
+enableEmoji: false # 允许通过:smile:输入emoji
 enableRobotsTXT: true # https://zhuanlan.zhihu.com/p/65463520 paperMod模板里有
 
 hasCJKLanguage: true # https://gohugo.io/getting-started/configuration/#hascjklanguage
@@ -26,6 +26,8 @@ defaultContentLanguage: zh-CN # 顶部首先展示的语言界面
 defaultContentLanguageInSubdir: false # 是否要在地址栏加上默认的语言代码
 
 pygmentsUseClasses: true # 代码高亮相关
+
+paginate: 10 # 一页显示10篇文章
 
 # Hugo allows you to set draft, date, publishDate, and expiryDate in the front matter of your content. By default, Hugo will not publish content when:
 # The draft value is true
@@ -157,6 +159,11 @@ params:
     appendFilePath: true # to append file path to Edit link
   ShowPostNavLinks: true
   ShowCodeCopyButtons: true
+
+  # ================================== 时间格式 ================================== #
+  DateFormat: "2006-01-02"
+
+
 outputs:
   home:
     - HTML
@@ -184,33 +191,33 @@ languages:
     contentDir: content/zh
     # ================================= 分类系统 ================================= #
     taxonomies: # https://gohugo.io/methods/site/taxonomies/
-      category: categories
-      tag: tags
+      category: "categories"
+      tag: "tags"
     # ================================== 菜单 ================================== #
     menus: # https://gohugo.io/content-management/menus/
       main:
-        - name: 首页
-          identifier: home
+        - identifier: home
+          name: "Home"
           url: /
           weight: 10
-        - name: 归档
-          identifier: archive
+        - identifier: archives
+          name: "Archives"
           url: archives/
           weight: 20
-        - name: 分类
-          identifier: category
+        - identifier: categories
+          name: "Categories"
           url: categories/
           weight: 30
-        - name: 标签
-          identifier: tag
+        - identifier: tags
+          name: "Tags"
           url: tags/
           weight: 40
-        - name: 搜索
-          identifier: search
+        - identifier: search
+          name: "Search"
           url: search/
           weight: 50
-        - name: 关于
-          identifier: about
+        - identifier: about
+          name: "About"
           url: about/
           weight: 60
 
