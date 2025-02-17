@@ -18,10 +18,11 @@ copyright: "[©2024 WvW-vOiDs.](https://wvw-voids.github.io/) | [CC BY-NC-SA 4.0
 # **************************************************************************** #
 
 enableInlineShortcodes: true # https://youtu.be/Eu4zSaKOY4A
-enableEmoji: false # 允许通过:smile:输入emoji
+enableEmoji: false # 允许通过:smile:输入😄
 enableRobotsTXT: true # https://zhuanlan.zhihu.com/p/65463520 paperMod模板里有
 
 hasCJKLanguage: true # https://gohugo.io/getting-started/configuration/#hascjklanguage
+
 defaultContentLanguage: zh-CN # 顶部首先展示的语言界面
 defaultContentLanguageInSubdir: false # 是否要在地址栏加上默认的语言代码
 
@@ -67,7 +68,7 @@ markup:
   # ================================== 代码高亮 ================================== #
   highlight:
     anchorLineNos: true # 在行号处设置锚点 (可以通过 url 传送)
-    # codeFences: true
+    # codeFences: false
     # guessSyntax: false
     # hl_Lines: ""
     # hl_inline: false
@@ -93,13 +94,16 @@ markup:
 
 params:
   # ************************************************************************** #
+  #                                    主要文章                                    #
+  # ************************************************************************** #
+  mainSections: # archive中显示的文章
+    - posts
+
+  # ************************************************************************** #
   #                                  LaTeX 设置                                  #
   # ************************************************************************** #
 
   mathjax: true # 默认开启数学模式, 如需关闭则在文档开始声明: math: false
-
-  mainSections: # archive中显示的文章
-  - posts
 
   # ************************************************************************** #
   #                                 PaperMod 设置                                #
@@ -130,7 +134,7 @@ params:
     # imageHeight: 120 # custom size
     # buttons:
     #   - name: Archive
-    #     url: "/archive"
+    #     url: "/archives"
     #   - name: Github
     #     url: "https://github.com/"
   socialIcons: # optional
@@ -158,9 +162,20 @@ params:
   ShowBreadCrumbs: false # Adds BreadCrumb Navigation above Post's Title to show subsections and Navigation to Home
   ShowPostNavLinks: true # Show Previous and Next Posts below a Post
   ShowCodeCopyButtons: true # To show/hide Code Copy button
-  # disableSpecial1stPost: true # To disable no-card special appearance of 1st post
   ShowPageNums: true
+  ShowWordCount: false
+  ShowRssButtonInSectionTermList: false
 
+  UseHugoToc: false
+
+  # disableSpecial1stPost: false # To disable no-card special appearance of 1st post
+  # disableScrollToTop: false # 返回顶部按钮
+
+  comments: false
+  hidemeta: false
+  hideSummary: true
+  showtoc: true
+  tocopen: true
 
   editPost:
     URL: "https://github.com/WvW-vOiDs/wvw-voids.github.io/tree/main/content/zh"
@@ -207,14 +222,18 @@ languages:
           name: "Home"
           url: /
           weight: 10
+        - identifier: posts
+          name: "Posts"
+          url: posts/
+          weight: 15
         - identifier: archives
           name: "Archives"
           url: archives/
           weight: 20
-        - identifier: categories
-          name: "Categories"
-          url: categories/
-          weight: 30
+        # - identifier: categories
+        #   name: "Categories"
+        #   url: categories/
+        #   weight: 30
         - identifier: tags
           name: "Tags"
           url: tags/
