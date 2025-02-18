@@ -28,7 +28,7 @@ defaultContentLanguageInSubdir: false # 是否要在地址栏加上默认的语�
 
 pygmentsUseClasses: true # 代码高亮相关
 
-paginate: 10 # 一页显示10篇文章
+# paginate: 10 # 一页显示10篇文章 WARN  deprecated: site config key paginate was deprecated in Hugo v0.128.0 and will be removed in a future release. Use pagination.pagerSize instead.
 
 # Hugo allows you to set draft, date, publishDate, and expiryDate in the front matter of your content. By default, Hugo will not publish content when:
 # The draft value is true
