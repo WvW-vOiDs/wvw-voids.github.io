@@ -5,34 +5,52 @@
 
 date: "{{ .Date }}"
 title: "{{ replace .File.ContentBaseName "-" " " | title }}"
+# author: "Me" # ["Me", "You"]
 
 tags: []
-categories: []
+# categories: [] # 舍弃使用, 通过文件夹结构确定 category
+
+# description: "Description 将会在single page顶部展示."
+# summary: "Summary 将会在list page展示."
+# hideSummary: false # 如果写summary就取消注释
 
 # **************************************************************************** #
 #                                     页面设置                                     #
 # **************************************************************************** #
 # =================================== model ================================== #
 draft: true
+# weight: 1 # 需要置顶时使用
 
 # ================================= component ================================ #
-ShowToc: true
-# TocOpen: true
+# ShowToc: false # 默认true
+# TocOpen: false # 默认true
 
-# ShowReadingTime: true
-# ShowBreadCrumbs: false
+# ShowReadingTime: true # 默认false
+# ShowWordCount: true # 默认false
+
+# searchHidden: true # 默认false
 
 # =================================== cover ================================== #
 # cover:
-#     image: "<image path/url>"
-#     # can also paste direct link from external site
-#     # ex. https://i.ibb.co/K0HVPBd/paper-mod-profilemode.png
-#     alt: "<alt text>"
-#     caption: "<text>"
-#     relative: false # To use relative path for cover image, used in hugo Page-bundles
+#     image: "<image path/url>" # image path/url
 
-#     responsiveImages: false # 减少网站的生成时间和大小可以禁用
+#     alt: "<alt text>" # alt text
+#     caption: "<text>" # display caption under cover
+#     relative: false # To use relative path for cover image, used in hugo Page-bundles
+#     hidden: true # only hide on current single page
+
+# **************************************************************************** #
+#                                     其他设置                                     #
+# **************************************************************************** #
 
 # ================================== mathjax ================================= #
 # mathjax: false # 禁止 mathjax 渲染 latex 公式
 ---
+
+<!-- ================================= 正文 ================================== -->
+
+
+
+
+<!-- ================================ 参考文献 ================================= -->
+# References
