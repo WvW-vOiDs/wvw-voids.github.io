@@ -1,4 +1,12 @@
+{{- /* Head custom content area start */ -}}
+{{- /*     Insert any custom code (web-analytics, resources, etc.) - it will appear in the <head></head> section of every page. */ -}}
+{{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
+{{- /* Head custom content area end */ -}}
+
 <!-- ============================= mathjax 设置 ============================== -->
 {{ if .Param "mathjax" }}
 {{ partialCached "mathjax.html" . }}
 {{ end }}
+
+<!-- ================================ 字体设置 ================================= -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-web/style.css" />
