@@ -6,3 +6,8 @@ body {
     word-break: break-word;
     background: var(--theme);
 }
+
+code {
+    font-family: "Jetbrains Mono";
+    direction: ltr;
+}
