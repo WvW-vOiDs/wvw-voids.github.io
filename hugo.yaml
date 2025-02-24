@@ -246,3 +246,9 @@ languages:
           name: "About"
           url: about/
           weight: 60
+
+module:
+  mounts:
+  - excludeFiles: "/slides/(?!_index\\.md).*"
+    source: content
+    target: content
