@@ -1,6 +1,8 @@
 ---
-title: 00-Draft
+title: Drafts
 description: ""
+
+weight: 10
 
 draft: false
 ---
