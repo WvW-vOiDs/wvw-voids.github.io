@@ -247,12 +247,6 @@ languages:
           url: about/
           weight: 60
 
-module:
-  mounts:
-  - excludeFiles: "/slides/(?!_index\\.md).*"
-    source: content
-    target: content
-
 assets:
   favicon: "icon/favicon.ico"
   favicon16x16: "icon/favicon16x16.png"
