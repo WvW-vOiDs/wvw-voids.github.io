@@ -541,8 +541,6 @@ Hugo does not provide a built-in template for Mermaid diagrams.[^hugo_diagram]
 
 ### Github Gist
 
-`{{< gist adityatelange 376cd56ee2c94aaa2e8b93200f2ba8b5 >}}`
-
 [The gist shortcode was deprecated in version 0.143.0 and will be removed in a future release. To continue embedding GitHub Gists in your content, you’ll need to create a custom shortcode](https://gohugo.io/shortcodes/gist/)
 
 ---
