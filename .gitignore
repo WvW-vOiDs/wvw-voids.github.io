@@ -26,3 +26,31 @@ _testmain.go
 .DS_Store
 .hugo_build.lock
 resources/_gen/
+
+# LaTeX
+*.synctex
+*.synctex.gz
+# *.aux
+# *.bbl
+# *.blg
+# *.idx
+# *.ind
+# *.lof
+# *.lot
+# *.out
+# *.toc
+# *.acn
+# *.acr
+# *.alg
+# *.glg
+# *.glo
+# *.gls
+# *.ist
+# *.fls
+# *.log
+# *.fdb_latexmk
+# *.synctex(busy)
+# *.synctex.gz(busy)
+# # beamer产生
+# *.nav
+# *.snm
