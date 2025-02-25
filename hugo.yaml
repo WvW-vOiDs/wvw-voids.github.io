@@ -252,3 +252,10 @@ module:
   - excludeFiles: "/slides/(?!_index\\.md).*"
     source: content
     target: content
+
+assets:
+  favicon: "icon/favicon.ico"
+  favicon16x16: "icon/favicon16x16.png"
+  favicon32x32: "icon/favicon32x32.png"
+  apple_touch_icon: "icon/apple_touch_icon.png"
+  safari_pinned_tab: "icon/safari_pinned_tab.svg"
