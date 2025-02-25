@@ -122,8 +122,7 @@ html 插入图片:
   alt="随机图床"
   title="点击刷新"
   class="ma0 w-75"
-  onclick="src=src+'?'+Math.random() * 5;"
->
+  onclick="src=src+'?'+Math.random() * 5;">
 
 总体来说越靠后的方法功能越全面, 但是语法也会越复杂.
 
