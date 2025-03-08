@@ -232,7 +232,7 @@ languages:
           weight: 20
         - identifier: slides
           name: "Slides"
-          url: slides/
+          url: slide/
           weight: 30
         # - identifier: posts
         #   name: "Blog"
