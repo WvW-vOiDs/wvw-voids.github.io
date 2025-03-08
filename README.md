@@ -1,4 +1,4 @@
-本项目为个人 Blog.
+本项目为个人主页.
 
 ## Conventional Commits 规范
 
