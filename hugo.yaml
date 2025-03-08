@@ -65,6 +65,10 @@ markup:
     # =========================== 在 .md 中启用 html 代码 ========================== #
     renderer:
         unsafe: true
+    # ========================== 在 .md 中启用 callouts ========================== #
+    parser:
+      attribute:
+        block: true
   # ================================== 代码高亮 ================================== #
   highlight:
     anchorLineNos: true # 在行号处设置锚点 (可以通过 url 传送)
@@ -96,8 +100,8 @@ params:
   # ************************************************************************** #
   #                                    主要文章                                    #
   # ************************************************************************** #
-  mainSections: # archive中显示的文章
-    - posts
+  # mainSections: # archive中显示的文章
+  #   - posts
 
   # ************************************************************************** #
   #                                  LaTeX 设置                                  #
@@ -145,15 +149,15 @@ params:
   # -------------------------------------------------------------------------- #
 
   # ================================== 搜索相关 ================================== #
-  fuseOpts: # https://www.fusejs.io/api/options.html
-    isCaseSensitive: false
-    shouldSort: true
-    # location: 0 # Determines approximately where in the text is the pattern expected to be found.
-    distance: 1000 # Determines how close the match must be to the fuzzy location (specified by location). An exact letter match which is distance characters away from the fuzzy location would score as a complete mismatch. A distance of 0 requires the match be at the exact location specified. A distance of 1000 would require a perfect match to be within 800 characters of the location to be found using a threshold of 0.8.
-    threshold: 0.4 # At what point does the match algorithm give up. A threshold of 0.0 requires a perfect match (of both letters and location), a threshold of 1.0 would match anything.
-    minMatchCharLength: 0 # Only the matches whose length exceeds this value will be returned. (For instance, if you want to ignore single character matches in the result, set it to 2).
-    # limit: 10 # limit (type: number): Denotes the max number of returned search results. (refer: https://www.fusejs.io/api/methods.html#search)
-    keys: ["title", "summary", "content"] # List of keys that will be searched. This supports nested paths, weighted search, searching in arrays of strings and objects.
+  # fuseOpts: # https://www.fusejs.io/api/options.html
+  #   isCaseSensitive: false
+  #   shouldSort: true
+  #   # location: 0 # Determines approximately where in the text is the pattern expected to be found.
+  #   distance: 1000 # Determines how close the match must be to the fuzzy location (specified by location). An exact letter match which is distance characters away from the fuzzy location would score as a complete mismatch. A distance of 0 requires the match be at the exact location specified. A distance of 1000 would require a perfect match to be within 800 characters of the location to be found using a threshold of 0.8.
+  #   threshold: 0.4 # At what point does the match algorithm give up. A threshold of 0.0 requires a perfect match (of both letters and location), a threshold of 1.0 would match anything.
+  #   minMatchCharLength: 0 # Only the matches whose length exceeds this value will be returned. (For instance, if you want to ignore single character matches in the result, set it to 2).
+  #   # limit: 10 # limit (type: number): Denotes the max number of returned search results. (refer: https://www.fusejs.io/api/methods.html#search)
+  #   keys: ["title", "summary", "content"] # List of keys that will be searched. This supports nested paths, weighted search, searching in arrays of strings and objects.
   # -------------------------------------------------------------------------- #
 
   # ================================== 页面元素 ================================== #
@@ -222,29 +226,37 @@ languages:
           name: "Home"
           url: /
           weight: 10
-        - identifier: posts
-          name: "Posts"
-          url: posts/
-          weight: 15
-        - identifier: archives
-          name: "Archives"
-          url: archives/
+        - identifier: blog
+          name: "Blog"
+          url: https://wvw-voids.github.io/blog
           weight: 20
+        - identifier: slides
+          name: "Slides"
+          url: slides/
+          weight: 30
+        # - identifier: posts
+        #   name: "Blog"
+        #   url: posts/
+        #   weight: 15
+        # - identifier: archives
+        #   name: "Archives"
+        #   url: archives/
+        #   weight: 20
         # - identifier: categories
         #   name: "Categories"
         #   url: categories/
         #   weight: 30
-        - identifier: tags
-          name: "Tags"
-          url: tags/
-          weight: 40
-        - identifier: search
-          name: "Search"
-          url: search/
-          weight: 50
+        # - identifier: tags
+        #   name: "Tags"
+        #   url: tags/
+        #   weight: 40
+        # - identifier: search
+        #   name: "Search"
+        #   url: search/
+        #   weight: 50
         - identifier: about
           name: "About"
-          url: about/
+          url: https://wvw-voids.github.io/blog/about/
           weight: 60
 
 assets:
