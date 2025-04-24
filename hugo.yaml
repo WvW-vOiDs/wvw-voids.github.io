@@ -3,7 +3,7 @@
 # **************************************************************************** #
 
 baseURL: "https://wvw-voids.github.io/"
-title: VoidStalker's Blog # 可以放在 languages 里
+title: 某有机体的二进制呓语 # 可以放在 languages 里
 theme: PaperMod
 copyright: "[©2024 WvW-vOiDs.](https://wvw-voids.github.io/) | [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
 
