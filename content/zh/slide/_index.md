@@ -15,6 +15,6 @@ mathjax: true
 
 - [The beamer class for LATEX](https://wvw-voids.github.io/slides/The-beamer-class-for-LATEX).[^The-beamer-class-for-LATEX]
 
-[^The-beamer-class-for-LATEX]: 此 beamer 来自[此处](https://warwick.ac.uk/fac/sci/physics/research/cfsa/people/pastmembers/wuensch/workshoplatex/beamertutorialkwuensch.pdf), 此处仅作测试网站功能使用.
+[^The-beamer-class-for-LATEX]: 此 slide 来自于 [网络](https://warwick.ac.uk/fac/sci/physics/research/cfsa/people/pastmembers/wuensch/workshoplatex/beamertutorialkwuensch.pdf), 此处仅作测试网站功能使用.
 
 <!-- ## My Slides -->
